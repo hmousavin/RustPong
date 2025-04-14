@@ -1,0 +1,8 @@
+[package]
+name = "Pong"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bracket-lib = "0.8.7"
+cargo-watch = "8.5.3"
