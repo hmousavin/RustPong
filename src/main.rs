@@ -108,7 +108,7 @@ impl Ball {
         let next_x = self.pos.x + dx + PAD;
         let next_y = self.pos.y + dy + PAD;
 
-        if next_x <= 11 {
+        if next_x <= PADDLE_ONE_X + PAD {
             let paddle = player_one.paddle_pos.clone();
             if paddle.y <= next_y && next_y <= (paddle.y + PADDLE_HEIGHT) {
                 let temp = self.dir.to.x;
@@ -117,7 +117,7 @@ impl Ball {
             } else {
                 return Some(Players::PlayerTwo);
             }
-        } else if 69 <= next_x {
+        } else if PADDLE_TWO_X - PAD <= next_x {
             let paddle = player_two.paddle_pos.clone();
             if paddle.y <= next_y && next_y <= (paddle.y + PADDLE_HEIGHT) {
                 let temp = self.dir.to.x;
